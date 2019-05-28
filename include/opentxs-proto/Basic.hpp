@@ -30,6 +30,7 @@ static const std::size_t MAX_LABEL_SIZE = 512;
 static const std::size_t MAX_TRANSACTION_MEMO_SIZE = 512;
 static const std::size_t MIN_PLAUSIBLE_SCRIPT = 2;
 static const std::size_t MAX_PLAUSIBLE_SCRIPT = 1048576;
+static const std::size_t MAX_PLAUSIBLE_WORK = 128;
 }  // namespace proto
 }  // namespace opentxs
 

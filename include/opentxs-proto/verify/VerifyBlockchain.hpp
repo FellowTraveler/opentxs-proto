@@ -30,6 +30,16 @@ static const VersionMap Bip47ContextAllowedBip47Chain = {
 static const VersionMap Bip47DirectionAllowedBip47Address = {
     {1, {1, 1}},
 };
+static const VersionMap BlockchainBlockHeaderAllowedBitcoinBlockHeaderFields = {
+    {1, {1, 1}},
+};
+static const VersionMap BlockchainBlockHeaderAllowedBlockchainBlockLocalData = {
+    {1, {1, 1}},
+};
+static const VersionMap BlockchainBlockHeaderAllowedEthereumBlockHeaderFields =
+    {
+        {1, {1, 1}},
+};
 static const VersionMap BlockchainTransactionAllowedInput = {
     {1, {1, 1}},
 };

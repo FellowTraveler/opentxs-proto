@@ -22,7 +22,10 @@ set(PROTO_SOURCES
     Bip47Address.proto
     Bip47Channel.proto
     Bip47Direction.proto
+    BitcoinBlockHeaderFields.proto
     BlindedSeriesList.proto
+    BlockchainBlockHeader.proto
+    BlockchainBlockLocalData.proto
     BlockchainTransaction.proto
     BlockchainTransactionInput.proto
     BlockchainTransactionOutput.proto
@@ -51,6 +54,7 @@ set(PROTO_SOURCES
     Enums.proto
     Envelope.proto
     EquityParams.proto
+    EthereumBlockHeaderFields.proto
     Faucet.proto
     GetWorkflow.proto
     HDPath.proto

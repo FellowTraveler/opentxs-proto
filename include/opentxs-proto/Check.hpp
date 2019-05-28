@@ -275,9 +275,9 @@
         }                                                                      \
     }
 
-#define UNDEFINED_VERSION(b)                                                   \
+#define MAX_IDENTIFIER(a)                                                      \
     {                                                                          \
-        _FAIL_2(PROTO_NAME, "undefined version", b)                            \
+        _CHECK_STRING(a, 0, MAX_PLAUSIBLE_IDENTIFIER);                         \
     }
 
 #define OPTIONAL_IDENTIFIER(a)                                                 \
@@ -334,6 +334,11 @@
 #define OPTIONAL_SUBOBJECTS_VA(a, b, ...)                                      \
     {                                                                          \
         _CHECK_SUBOBJECTS(a, b, silent, __VA_ARGS__);                          \
+    }
+
+#define UNDEFINED_VERSION(b)                                                   \
+    {                                                                          \
+        _FAIL_2(PROTO_NAME, "undefined version", b)                            \
     }
 
 namespace opentxs

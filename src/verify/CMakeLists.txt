@@ -23,7 +23,10 @@ set(cxx-sources
   bip47address/Bip47Address_1.cpp
   bip47channel/Bip47Channel_1.cpp
   bip47direction/Bip47Direction_1.cpp
+  bitcoinblockheaderfields/BitcoinBlockHeaderFields_1.cpp
   blindedserieslist/BlindedSeriesList.cpp
+  blockchainblockheader/BlockchainBlockHeader_1.cpp
+  blockchainblocklocaldata/BlockchainBlockLocalData_1.cpp
   blockchaintransaction/BlockchainTransaction_1.cpp
   blockchaintransactioninput/BlockchainTransactionInput_1.cpp
   blockchaintransactionoutput/BlockchainTransactionOutput_1.cpp
@@ -47,6 +50,7 @@ set(cxx-sources
   credentialset/CredentialSet_1.cpp
   equityparams/EquityParams_1.cpp
   envelope/Envelope_1.cpp
+  ethereumblockheaderfields/EthereumBlockHeaderFields_1.cpp
   faucet/Faucet_1.cpp
   getworkflow/GetWorkflow_1.cpp
   hdpath/HDPath_1.cpp
