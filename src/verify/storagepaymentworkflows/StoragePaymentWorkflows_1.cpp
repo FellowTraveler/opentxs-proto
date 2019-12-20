@@ -46,7 +46,7 @@ bool CheckProto_3(const StoragePaymentWorkflows& input, const bool silent)
 
 bool CheckProto_4(const StoragePaymentWorkflows& input, const bool silent)
 {
-    UNDEFINED_VERSION(4)
+    return CheckProto_1(input, silent);
 }
 
 bool CheckProto_5(const StoragePaymentWorkflows& input, const bool silent)

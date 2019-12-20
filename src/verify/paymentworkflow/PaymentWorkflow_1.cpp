@@ -55,6 +55,8 @@ bool CheckProto_1(const PaymentWorkflow& input, const bool silent)
         case PAYMENTWORKFLOWTYPE_INTERNALTRANSFER:
         case PAYMENTWORKFLOWTYPE_INCOMINGCASH:
         case PAYMENTWORKFLOWTYPE_OUTGOINGCASH:
+        case PAYMENTWORKFLOWTYPE_OUTGOINGVOUCHER:
+        case PAYMENTWORKFLOWTYPE_INCOMINGVOUCHER:
         case PAYMENTWORKFLOWTYPE_ERROR:
         default: {
             FAIL_2("Invalid type", __LINE__)
@@ -362,6 +364,8 @@ bool CheckProto_1(const PaymentWorkflow& input, const bool silent)
         case PAYMENTWORKFLOWTYPE_INTERNALTRANSFER:
         case PAYMENTWORKFLOWTYPE_INCOMINGCASH:
         case PAYMENTWORKFLOWTYPE_OUTGOINGCASH:
+        case PAYMENTWORKFLOWTYPE_OUTGOINGVOUCHER:
+        case PAYMENTWORKFLOWTYPE_INCOMINGVOUCHER:
         case PAYMENTWORKFLOWTYPE_ERROR:
         default: {
             FAIL_2("Invalid type", __LINE__)
@@ -380,6 +384,8 @@ bool CheckProto_1(const PaymentWorkflow& input, const bool silent)
         case PAYMENTWORKFLOWTYPE_INTERNALTRANSFER:
         case PAYMENTWORKFLOWTYPE_INCOMINGCASH:
         case PAYMENTWORKFLOWTYPE_OUTGOINGCASH:
+        case PAYMENTWORKFLOWTYPE_OUTGOINGVOUCHER:
+        case PAYMENTWORKFLOWTYPE_INCOMINGVOUCHER:
         case PAYMENTWORKFLOWTYPE_ERROR:
         default: {
             FAIL_2("Invalid type", __LINE__)

@@ -1,4 +1,4 @@
-// Copyright (c) 2020 The Open-Transactions developers
+// Copyright (c) 2019 The Open-Transactions developers
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -21,7 +21,7 @@
 
 namespace opentxs::proto
 {
-bool CheckProto_3(const PaymentWorkflow& input, const bool silent)
+bool CheckProto_4(const PaymentWorkflow& input, const bool silent)
 {
     CHECK_IDENTIFIER(id)
 
@@ -37,6 +37,8 @@ bool CheckProto_3(const PaymentWorkflow& input, const bool silent)
     }
 
     switch (input.type()) {
+        case PAYMENTWORKFLOWTYPE_OUTGOINGVOUCHER:
+        case PAYMENTWORKFLOWTYPE_INCOMINGVOUCHER:
         case PAYMENTWORKFLOWTYPE_OUTGOINGCHEQUE:
         case PAYMENTWORKFLOWTYPE_INCOMINGCHEQUE:
         case PAYMENTWORKFLOWTYPE_OUTGOINGINVOICE:
@@ -106,8 +108,6 @@ bool CheckProto_3(const PaymentWorkflow& input, const bool silent)
             }
         } break;
         case PAYMENTWORKFLOWTYPE_ERROR:
-        case PAYMENTWORKFLOWTYPE_OUTGOINGVOUCHER:
-        case PAYMENTWORKFLOWTYPE_INCOMINGVOUCHER:
         default: {
             FAIL_2("Invalid type", __LINE__)
         }
@@ -154,6 +154,7 @@ bool CheckProto_3(const PaymentWorkflow& input, const bool silent)
     const auto accounts = input.account().size();
 
     switch (input.type()) {
+        case PAYMENTWORKFLOWTYPE_OUTGOINGVOUCHER:
         case PAYMENTWORKFLOWTYPE_OUTGOINGCHEQUE:
         case PAYMENTWORKFLOWTYPE_OUTGOINGINVOICE: {
             CHECK_IDENTIFIER(notary);
@@ -367,6 +368,7 @@ bool CheckProto_3(const PaymentWorkflow& input, const bool silent)
                 }
             }
         } break;
+        case PAYMENTWORKFLOWTYPE_INCOMINGVOUCHER:
         case PAYMENTWORKFLOWTYPE_INCOMINGCHEQUE:
         case PAYMENTWORKFLOWTYPE_INCOMINGINVOICE: {
             OPTIONAL_IDENTIFIER(notary);
@@ -1162,8 +1164,6 @@ bool CheckProto_3(const PaymentWorkflow& input, const bool silent)
                 }
             }
         } break;
-        case PAYMENTWORKFLOWTYPE_OUTGOINGVOUCHER:
-        case PAYMENTWORKFLOWTYPE_INCOMINGVOUCHER:
         case PAYMENTWORKFLOWTYPE_ERROR:
         default: {
             FAIL_2("Invalid type", __LINE__)
@@ -1175,6 +1175,8 @@ bool CheckProto_3(const PaymentWorkflow& input, const bool silent)
         case PAYMENTWORKFLOWTYPE_INCOMINGCHEQUE:
         case PAYMENTWORKFLOWTYPE_OUTGOINGINVOICE:
         case PAYMENTWORKFLOWTYPE_INCOMINGINVOICE:
+        case PAYMENTWORKFLOWTYPE_OUTGOINGVOUCHER:
+        case PAYMENTWORKFLOWTYPE_INCOMINGVOUCHER:
         case PAYMENTWORKFLOWTYPE_OUTGOINGTRANSFER:
         case PAYMENTWORKFLOWTYPE_INCOMINGTRANSFER:
         case PAYMENTWORKFLOWTYPE_INTERNALTRANSFER: {
@@ -1183,8 +1185,6 @@ bool CheckProto_3(const PaymentWorkflow& input, const bool silent)
         case PAYMENTWORKFLOWTYPE_OUTGOINGCASH:
         case PAYMENTWORKFLOWTYPE_INCOMINGCASH: {
         } break;
-        case PAYMENTWORKFLOWTYPE_OUTGOINGVOUCHER:
-        case PAYMENTWORKFLOWTYPE_INCOMINGVOUCHER:
         case PAYMENTWORKFLOWTYPE_ERROR:
         default: {
             FAIL_2("Invalid type", __LINE__)
@@ -1194,4 +1194,83 @@ bool CheckProto_3(const PaymentWorkflow& input, const bool silent)
     return true;
 }
 
+bool CheckProto_5(const PaymentWorkflow& input, const bool silent)
+{
+    UNDEFINED_VERSION(5)
+}
+
+bool CheckProto_6(const PaymentWorkflow& input, const bool silent)
+{
+    UNDEFINED_VERSION(6)
+}
+
+bool CheckProto_7(const PaymentWorkflow& input, const bool silent)
+{
+    UNDEFINED_VERSION(7)
+}
+
+bool CheckProto_8(const PaymentWorkflow& input, const bool silent)
+{
+    UNDEFINED_VERSION(8)
+}
+
+bool CheckProto_9(const PaymentWorkflow& input, const bool silent)
+{
+    UNDEFINED_VERSION(9)
+}
+
+bool CheckProto_10(const PaymentWorkflow& input, const bool silent)
+{
+    UNDEFINED_VERSION(10)
+}
+
+bool CheckProto_11(const PaymentWorkflow& input, const bool silent)
+{
+    UNDEFINED_VERSION(11)
+}
+
+bool CheckProto_12(const PaymentWorkflow& input, const bool silent)
+{
+    UNDEFINED_VERSION(12)
+}
+
+bool CheckProto_13(const PaymentWorkflow& input, const bool silent)
+{
+    UNDEFINED_VERSION(13)
+}
+
+bool CheckProto_14(const PaymentWorkflow& input, const bool silent)
+{
+    UNDEFINED_VERSION(14)
+}
+
+bool CheckProto_15(const PaymentWorkflow& input, const bool silent)
+{
+    UNDEFINED_VERSION(15)
+}
+
+bool CheckProto_16(const PaymentWorkflow& input, const bool silent)
+{
+    UNDEFINED_VERSION(16)
+}
+
+bool CheckProto_17(const PaymentWorkflow& input, const bool silent)
+{
+    UNDEFINED_VERSION(17)
+}
+
+bool CheckProto_18(const PaymentWorkflow& input, const bool silent)
+{
+    UNDEFINED_VERSION(18)
+}
+
+bool CheckProto_19(const PaymentWorkflow& input, const bool silent)
+{
+    UNDEFINED_VERSION(19)
+}
+
+bool CheckProto_20(const PaymentWorkflow& input, const bool silent)
+{
+    UNDEFINED_VERSION(20)
+}
 }  // namespace opentxs::proto

@@ -164,6 +164,8 @@ bool CheckProto_2(const StorageWorkflowType& input, const bool silent)
         } break;
         case PAYMENTWORKFLOWTYPE_INCOMINGCASH:
         case PAYMENTWORKFLOWTYPE_OUTGOINGCASH:
+        case PAYMENTWORKFLOWTYPE_INCOMINGVOUCHER:
+        case PAYMENTWORKFLOWTYPE_OUTGOINGVOUCHER:            
         case PAYMENTWORKFLOWTYPE_ERROR:
         default: {
             FAIL_2("invalid type", static_cast<std::uint32_t>(input.type()))

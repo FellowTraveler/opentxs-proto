@@ -23,7 +23,7 @@ bool CheckProto_1(const ContactEvent& input, const bool silent)
             CHECK_EXCLUDED(account);
             CHECK_EXCLUDED(accountevent);
         } break;
-        case CONTACTEVENT_INCOMONGPAYMENT:
+        case CONTACTEVENT_INCOMINGPAYMENT:
         case CONTACTEVENT_OUTGOINGPAYMENT: {
             CHECK_EXCLUDED(timestamp);
             CHECK_EXCLUDED(message);

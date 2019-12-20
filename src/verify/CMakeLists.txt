@@ -95,6 +95,7 @@ set(
   paymentworkflow/PaymentWorkflow_1.cpp
   paymentworkflow/PaymentWorkflow_2.cpp
   paymentworkflow/PaymentWorkflow_3.cpp
+  paymentworkflow/PaymentWorkflow_4.cpp
   peerobject/PeerObject_1.cpp
   peerobject/PeerObject_2.cpp
   peerobject/PeerObject_3.cpp
@@ -182,6 +183,7 @@ set(
   storageworkflowtype/StorageWorkflowType_1.cpp
   storageworkflowtype/StorageWorkflowType_2.cpp
   storageworkflowtype/StorageWorkflowType_3.cpp
+  storageworkflowtype/StorageWorkflowType_4.cpp
   storesecret/StoreSecret_1.cpp
   symmetrickey/SymmetricKey_1.cpp
   taggedkey/TaggedKey_1.cpp
